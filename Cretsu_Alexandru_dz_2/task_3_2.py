@@ -8,6 +8,5 @@ for words in worker_list:
         
     words = words.lower()
     if 'игорь' or 'марина' or 'николай' in words:
-        
-      
-      
+        names.append('игорь', 'марина', 'николай')
+  
