@@ -1,12 +1,18 @@
+# Задание 3
+# Выделить из списка имена и создать их приветствие
 
 worker_list = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА',
                'токарь высшего разряда нИКОЛАЙ', 'директор аэлита']
 
+# Метод со списком
 names = []
 for words in worker_list:
-    for letters in words:
-        
+    new_list = []
     words = words.lower()
-    if 'игорь' or 'марина' or 'николай' in words:
-        names.append('игорь', 'марина', 'николай')
-  
+    new_list.append(words.split(' '))
+    for elements in new_list:
+        names.append(elements[-1])
+
+
+for persons in names:
+    print(f'Привет {persons.capitalize()}!')
