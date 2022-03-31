@@ -5,8 +5,7 @@ value_list = []
 for value in range(0, 1000):
     if value % 2 != 0:
         # value to the power of 3
-        value **= 3
-        value_list.append(value)
+        value_list.append(value ** 3)
 
 # creating list of sum of each value which can be divided at 7
 sum_list = []
