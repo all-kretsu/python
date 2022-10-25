@@ -13,6 +13,5 @@ for words in worker_list:
     for elements in new_list:
         names.append(elements[-1])
 
-
 for persons in names:
     print(f'Привет {persons.capitalize()}!')
