@@ -1,4 +1,4 @@
-# Задание 1, урок 3, перевод слов.
+# Задание 1/2, урок 3, перевод слов.
 
 numbers = {'zero': 'ноль', 'one': 'один', 'two': 'два', 'three': 'три',
            'four': 'четыре', 'five': 'пять', 'six': 'шесть', 'seven': 'семь',
@@ -24,5 +24,3 @@ def num_translate_adv(word):
     for eng in numbers:
         if word == eng.capitalize():
             print(numbers.setdefault(eng).capitalize())
-
-
