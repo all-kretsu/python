@@ -12,13 +12,17 @@ adjectives = ['веселый', 'мягкий', 'зеленый', 'утопич�
 # функция с совмещением списков в предложения
 def get_jokes(number):
     while number != 0:
+
         # смешивание списков
         shuffle(nouns), shuffle(verbs), shuffle(adjectives)
         # объединение списков
         zip_words = list(zip(nouns, verbs, adjectives))
         # преобразование в строку и вывод
         print(' '.join(zip_words[0]))
+        # удаление элементов из списка
+        nouns.pop(0), verbs.pop(0), adjectives.pop(0)
+
         number -= 1
 
 
-get_jokes(4)
+get_jokes(5)
