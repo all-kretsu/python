@@ -8,14 +8,12 @@ def currency_rate(currency):
     # get http
     cur_rate = requests.get('http://cbr.ru/scripts/XML_daily.asp').text
     # split in list result of http
-    rate_lst = list(cur_rate.split('ID'))
-    # get requested value
-    numb = [x.split('Value') for x in rate_lst if currency in x]
-    # split requested value
+    rate_lst = cur_rate.split('ID')
+    # get and split requested value, make argument to upper case
+    numb = [x.split('Value>') for x in rate_lst if currency.upper() in x]
     for y in numb:
+        z = y[-2].split('</')
+        print(''.join(z))
 
-        print(y[-2])
-    # print(''.join(numb))
 
-
-currency_rate('MDL')
+currency_rate('mdl')
